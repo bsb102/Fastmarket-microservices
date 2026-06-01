@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  gateway:
+    build: ./api-gateway
+    ports:
+      - "3000:3000"
+
+  inventory-service:
+    build: ./services/inventory-service
+    ports:
+      - "3001:3001"
+
+  order-service:
+    build: ./services/order-service
+    ports:
+      - "3002:3002"
+
+  logistics-service:
+    build: ./services/logistics-service
+    ports:
+      - "3003:3003"
+
+  notification-service:
+    build: ./services/notification-service
+    ports:
+      - "3004:3004"
